@@ -66,11 +66,6 @@ jobs:
           git clone https://github.com/frainzy1477/luci-app-clash.git
           git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic.git
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
-      - name: 同步最新的源码
-        run: |
-          git remote add openwrt https://github.com/coolsnowwolf/lede.git
-          git pull openwrt master
-          git remote -v
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
